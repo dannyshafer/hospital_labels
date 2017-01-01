@@ -44,8 +44,8 @@ class StampsController < ApplicationController
 
   def show
     @stamp = Stamp.find_by_id(params[:id])
-    @country_stamp = @stamp.country_stamps.sample
-    @subject_stamp = @stamp.subject_stamps.sample
+    # @country_stamp = @stamp.country_stamps.sample
+    # @subject_stamp = @stamp.subject_stamps.sample
     @comment = Comment.new
   end
 
