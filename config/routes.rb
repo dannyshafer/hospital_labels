@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users do
-    resources :stamps do
+    resources :stamps, :path => "labels" do
       resources :comments
     end
   end
