@@ -1,5 +1,5 @@
 class Stamp < ActiveRecord::Base
-  has_attached_file :image, styles: { large: "600x600", medium: "300x300", small: "150x150#",}
+  has_attached_file :image, styles: { large: ["600x600", :jpg], medium: ["300x300", :jpg], small: ["150x150", :jpg]}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   belongs_to :user
   has_one :country
